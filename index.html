@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -23,10 +25,12 @@
       </div>
       <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</h2>
       <section class="feature">
-        <h3>Настоящий городок</h3>
-        <p>– №1 –</p>
-        <p>Седона - не аттракцион для туристов, там течет своя жизнь.</p>
-        <img src="img/town.jpg" width="800" height="256" alt="Фото города">
+        <div class="feature-1">
+          <h3>Настоящий городок</h3>
+          <p>– №1 –</p>
+          <p>Седона - не аттракцион для туристов, там течет своя жизнь.</p>
+          <img src="img/town.jpg" width="800" height="256" alt="Фото города">
+        </div>
               <ul class="feature-list">
                 <li class="feature-item">
                   <h4>Жилье</h4>
@@ -48,21 +52,23 @@
         <p>Да, по нему можно пройти! Если конечно вы осмелитесь.</p>
         <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
       </section>
-      <section class="feature-3">
-        <h3>Небольшая площадь</h3>
-        <p>– №3 –</p>
-        <p>Все достопримечательности находятся очень близко.</p>
-      </section>
-      <section class="feature-4">
-        <h3>Красивая дорога</h3>
-        <p>– №4 –</p>
-        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </section>
-      <section class="feature-5">
-        <h3>Мало туристов</h3>
-        <p>– №5 –</p>
-        <p>Большинство едет в Гранд Каньон и толпится там.</p>
-      </section>
+      <div class="feature-3-5"
+        <section class="feature-3">
+          <h3>Небольшая площадь</h3>
+          <p>– №3 –</p>
+          <p>Все достопримечательности находятся очень близко.</p>
+        </section>
+        <section class="feature-4">
+          <h3>Красивая дорога</h3>
+          <p>– №4 –</p>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </section>
+        <section class="feature-5">
+          <h3>Мало туристов</h3>
+          <p>– №5 –</p>
+          <p>Большинство едет в Гранд Каньон и толпится там.</p>
+        </section>
+      </div>
       <section class="interested">
         <h2 class="visually-hidden">Заинтересовались?</h2>
         <span>Заинтересовались?</span>
@@ -73,22 +79,26 @@
         <button class="modal-open" type="button">Поиск гостиницы в Седоне</button>
       <form class= "search-form" action="https://echo.htmlacademy.ru" method="get">
         <p class="search-item">
-          <label for="arrival-date">Дата заезда</label>
+          <label for="arrival-date">Дата заезда:</label>
           <input type="text" id="arrival-date" name="arrival-date" value="24 апреля 2017">
         </p>
         <p class="search-item">
-          <label for="departure-date">Дата выезда</label>
+          <label for="departure-date">Дата выезда:</label>
           <input type="text" id="departure-date" name="departure-date" value="4 июля 2017">
         </p>
         <p class="search-item">
-          <label for="amount-adults">Взрослые</label>
-          <input type="number" id=" amount-adults" name=" amount-adults" min="0" value="2">
+          <label for="amount-adults">Взрослые:</label>
+          <button class="button">-</button>
+          <input type="number" id="amount-adults" name="amount-adults" min="0" value="2">
+          <button class="button">+</button>
         </p>
         <p class="search-item">
-          <label for="amount-children">Дети</label>
+          <label for="amount-children">Дети:</label>
+          <button class="button">-</button>
           <input type="number" id="amount-children" name="amount-children" min="0" value="0">
+          <button class="button">+</button>
         </p>
-        <button class="button" type="submit">Найти</button>
+        <button class="button search-button" type="submit">Найти</button>
       </form>
         <img src="img/map.jpg" width="1200" height="593" alt="Карта">
       </section>
@@ -104,7 +114,7 @@
       </div>
       <p class="footer-copyright">
         <b>Website by</b>
-        <a class="button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
+        <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
       </p>
     </footer>
   </body>
