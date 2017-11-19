@@ -9,7 +9,7 @@ body {
   text-transform: uppercase;
 
   background-color: #ffffff;
-  background-image: url("img/index-background.jpg");
+  background-image: url(../img/index-background.jpg);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -215,7 +215,7 @@ p.search-item{
 }
 
 .filters {
-  background-image: url("img/hotels-background.jpg");
+  background-image: url(../img/hotels-background.jpg);
   background-color: #534d4d;
   background-repeat: no-repeat;
 }
