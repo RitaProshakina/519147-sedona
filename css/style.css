@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 1200px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -9,9 +10,6 @@ body {
   text-transform: uppercase;
 
   background-color: #ffffff;
-  background-image: url(../img/index-background.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -20,6 +18,9 @@ a {
 
 .visually-hidden {
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
 }
 
 .main-navigation {
@@ -47,8 +48,15 @@ a {
   color: rgba ( 0, 0, 0, 0.3);
 }
 
-.site-navigation-current a {
+.site-navigation-current {
   color: #766357;
+}
+
+.background {
+  background-image: url(../img/index-background.jpg);
+  background-size: 1200px 570px;
+  background-color: #80abcf;
+  min-height: 570px;
 }
 
 .description {
@@ -212,6 +220,7 @@ p.search-item{
 .search-item input:focus {
   background-color: transparent;
   border: 2px solid #e5e5e5;
+  outline: none;
 }
 
 .filters {
@@ -246,6 +255,10 @@ p.search-item{
 
   background-color: transparent;
   border: 2px solid #ffffff;
+}
+
+.filter-input-checkbox {
+  display: block;
 }
 
 .filter button{
