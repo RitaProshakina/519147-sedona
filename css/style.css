@@ -1,3 +1,9 @@
+html,
+body {
+  min-width: 1200px;
+  min-height: 2764px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,16 +29,47 @@ a {
   position: absolute;
 }
 
+.navigation-container {
+  width: 1056px;
+  margin: 0 auto;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
 .main-navigation {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
   color: #000000;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: #ffffff;
 }
 
+.main-header-logo {
+  width: 138px;
+  height: 70px;
+  position: absolute;
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+
+  background-color: #ffffff;
+}
+
+.main-navigation-wrapper .navigation-container {
+  display: flex;
+}
+
 .site-navigation {
+  min-width: 1056px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -53,13 +90,20 @@ a {
 }
 
 .background {
+  margin: 0px;
+  padding: 0px;
+  min-width: 1200px;
+  min-height: 511px;
+
   background-image: url(../img/index-background.jpg);
-  background-size: 1200px 570px;
+  background-size: 1200px 511px;
   background-color: #80abcf;
-  min-height: 570px;
+  min-height: 511px;
 }
 
 .description {
+  margin-top: 57px;
+
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -75,23 +119,47 @@ h2 {
   text-align: center;
 }
 
-.feature-1, .feature-2{
+.feature-1, .feature-2 {
+  margin: 0;
+  padding: 0;
+
   color: #ffffff;
   text-align: center;
   background-color: #81b3d2;
 }
 
-.feature-1 h3, .feature-2 h3{
+.feature-1{
+  background-image: url(../img/town.jpg);
+  background-size: 800px 256px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.feature-2{
+  background-image: url(../img/bridge.jpg);
+  background-size: 800px 256px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.feature-1 h3, .feature-2 h3 {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 
 .feature-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
   list-style: none;
 }
 
 .feature-item {
+  width: 400px;
+
   text-align: center;
 }
 
@@ -102,13 +170,25 @@ h2 {
   color: #000000;
 }
 
-.feature-3-5{
+.feature-3-5 {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
   text-align: center;
 
   background-color: #eeeeee;
 }
 
+.feature-3, .feature-4, .feature-5 {
+  width: 400px;
+}
+
 .interested {
+  margin: 0;
+  padding: 0;
+
   text-align: center;
 }
 
@@ -122,6 +202,14 @@ h2 {
 .interested p {
   font-size: 14px;
   line-height: 24px;
+}
+
+.map {
+ margin: 0;
+ padding: 0;
+
+ background-image: url(../img/map.jpg);
+ background-size: 1200px 593px;
 }
 
 .modal {
@@ -223,10 +311,51 @@ p.search-item{
   outline: none;
 }
 
+.inner-page{
+  margin: 0;
+  padding: 0;
+  min-width: 1200px;
+  min-height: 931px;
+
+  background-color: #ffffff;
+}
+
 .filters {
+  margin: 0px;
+  padding: 0px;
+
   background-image: url(../img/hotels-background.jpg);
+  background-size: 1200px 218px;
   background-color: #534d4d;
   background-repeat: no-repeat;
+}
+
+.filters-container {
+  padding-left:73px;
+  padding-right: 73px;
+  display: flex;
+}
+
+.infrastructure {
+  margin: 0;
+  padding: 0;
+  width: 241px;
+  border: none;
+}
+
+.accomodation {
+  margin: 0;
+  padding: 0;
+  width: 288px;
+  margin-right: 200px;
+  border: none;
+}
+
+.cost-day {
+  margin: 0;
+  padding: 0;
+  width: 328px;
+  border: none;
 }
 
 .filter fieldset {
@@ -276,6 +405,22 @@ p.search-item{
   border: none;
 }
 
+.sort-results {
+  margin: 0;
+  padding-left:73px;
+  padding-right: 73px;
+  display: flex;
+}
+
+.results-container {
+  width: 1056px;
+  margin: 0 auto;
+  padding-left: 73px;
+  padding-right: 73px;
+
+  display: flex;
+}
+
 .sort-results span {
   font-size: 21px;
   font-weight: bold;
@@ -312,6 +457,14 @@ p.search-item{
 }
 
 .search-results ul{
+  list-style: none;
+}
+
+.hotels-list {
+  min-width: 1056px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -374,10 +527,31 @@ a.booking-button:active {
 }
 
 .main-footer {
+  width: 1200px;
+  margin-top: -120px;
+  padding: 0;
   background-color: rgba( 255, 255, 255, 0.9);
+
+  display: flex;
+}
+
+.inner-footer {
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.footer-container{
+  display: flex;
 }
 
 .footer-hashtag {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -386,12 +560,22 @@ a.booking-button:active {
   text-align: center;
 }
 
+.footer-social {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-social ul {
   list-style: none;
   text-align: center;
 }
 
 .footer-copyright {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+
   font-size: 14px;
   line-height: 26px;
   color: #000000;

@@ -7,19 +7,25 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <img src="img/index-logo.png" width="138" height="70" alt="Логотип Седоны">
-        <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="photovideo.html">Фото и видео</a></li>
-          <li><a href="map.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
+        <a class="main-header-logo">
+		      <img src="img/index-logo.png" width="138" height="70" alt="Логотип Седоны">
+		    </a>
+		    <div class="main-navigation-wrapper">
+         <div class="navigation-container">
+           <ul class="site-navigation">
+             <li><a href="info.html">Информация</a></li>
+             <li><a href="photovideo.html">Фото и видео</a></li>
+             <li><a href="map.html">Карта штата</a></li>
+             <li><a href="hotels.html">Гостиницы</a></li>
+           </ul>
+		     </div>
+		    </div>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Седона</h1>
       <section class="background"></section>
       <div class="description">
@@ -54,7 +60,7 @@
         <p>Да, по нему можно пройти! Если конечно вы осмелитесь.</p>
         <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
       </section>
-      <div class="feature-3-5"
+      <div class="feature-3-5">
         <section class="feature-3">
           <h3>Небольшая площадь</h3>
           <p>– №3 –</p>
@@ -76,6 +82,9 @@
         <span>Заинтересовались?</span>
         <p>Укажите предполагаемые даты поездки, и мы покажем лучшие предложение гостиниц в Седоне</p>
       </section>
+	    <div class="map">
+	      <img src="img/map.jpg" width="1200" height="593" alt="Карта">
+	    </div>
       <section class="modal modal-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <button class="modal-open" type="button">Поиск гостиницы в Седоне</button>
@@ -102,22 +111,23 @@
         </p>
         <button class="button search-button" type="submit">Найти</button>
       </form>
-        <img src="img/map.jpg" width="1200" height="593" alt="Карта">
       </section>
     </main>
     <footer class="main-footer">
-      <p class=footer-hashtag>#Visitsedona</p>
-      <div class="footer-social">
-        <ul>
+	    <div class="footer-container">
+        <p class="footer-hashtag">#Visitsedona</p>
+        <div class="footer-social">
+          <ul>
             <li><a class="social-button" href="#">Твиттер</a></li>
             <li><a class="social-button" href="#">Фейсбук</a></li>
             <li><a class="social-button" href="#">YouTube</a></li>
-        </ul>
-      </div>
-      <p class="footer-copyright">
+          </ul>
+        </div>
+        <p class="footer-copyright">
         Website by
         <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
-      </p>
+        </p>
+	    </div>
     </footer>
   </body>
 </html>
