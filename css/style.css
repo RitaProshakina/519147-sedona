@@ -16,7 +16,6 @@ body {
   text-transform: uppercase;
 
   background-color: #ffffff;
-
   box-shadow: 0 -5px 15px 5px rgba(0,1,1,.2);
 }
 
@@ -24,11 +23,28 @@ a {
   text-decoration: none;
 }
 
-.visually-hidden {
-  visibility: hidden;
-  height: 0;
-  overflow: hidden;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-navigation {
@@ -55,10 +71,34 @@ a {
   margin: 0;
   padding: 0;
 
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 
+.site-navigation li:first-child{
+  padding-right: 73px;
+}
+
+.site-navigation li:nth-child(2){
+  padding-right: 146px;
+  padding-left: 73px;
+}
+
+.site-navigation li:nth-child(3){
+  padding-right: 73px;
+  padding-left: 247px;
+}
+
+.site-navigation li:last-child{
+   padding-left: 90px;
+}
+
 .site-navigation a {
+  display: block;
+  padding: 16px 0px;
+
   color: #000000;
 }
 
@@ -82,15 +122,18 @@ a {
 
   background-image: url(../img/index-background.jpg);
   background-size: 1200px 511px;
-  background-color: #80abcf;
+  background-color: transparent;
   min-height: 511px;
 }
 
 .description {
   margin-top: 57px;
+  padding-right: 312px;
+  padding-left: 312px;
 }
 
 .description h2 {
+  margin-bottom: 29px;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -101,7 +144,7 @@ a {
 .description p {
   font-size: 14px;
   font-weight: normal;
-  line-height: 21px;
+  line-height: 26px;
   color: #333333;
   text-align: center;
 }
@@ -117,10 +160,13 @@ a {
 }
 
 .feature-1{
+  margin-top: 51px;
   background-image: url(../img/town.jpg);
   background-size: 800px 256px;
   background-repeat: no-repeat;
   background-position: right;
+
+  outline: 2px solid #FFCC00;
 }
 
 .feature-2{
@@ -131,13 +177,25 @@ a {
 }
 
 .feature-1 h3, .feature-2 h3 {
+  margin: 0;
+  padding-top: 47px;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 
+
+.feature-1 h3, .feature-1 p {
+  padding-right: 858px;
+  padding-left: 40px;
+}
+
+.feature-1 p, .feature-2 p{
+  margin-top: 23px;
+}
+
 .feature-list {
-  margin: 0;
+  margin-top: 61px;
   padding: 0;
 
   display: flex;
@@ -152,16 +210,29 @@ a {
 }
 
 .feature-item h4, .feature-3-5 h3 {
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
   color: #000000;
 }
 
-.feature-3-5 {
-  margin: 0;
-  padding: 0;
+.feature-item h4::before {
+  content: "";
 
+  position: absolute;
+
+  width: 74px;
+  height: 70px;
+}
+
+.feature-item h4 {
+  margin-top: 23px;
+
+}
+
+.feature-3-5 {
   display: flex;
 
   text-align: center;
