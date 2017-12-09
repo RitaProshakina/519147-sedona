@@ -339,19 +339,23 @@ ul.site-navigation {
   background-color: #503e33;
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal{
-  position: fixed;
+  position: absolute;
 
   background-color: #ffffff;
  }
 
 .modal-search {
-  top: 300px;
+  top: 2182px;
   left: 50%;
-  width: 568px;
-  margin-left: -285px;
+  width: 570px;
+  margin-left: -286px;
   padding-top: 53px;
-}
+ }
 
 .search-item {
   padding-left: 58px;
@@ -361,6 +365,20 @@ ul.site-navigation {
 
 label{
   padding-right: 20px;
+}
+
+.search-item:first-child svg{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 323px;
+  fill: a9a9a9;
+}
+
+.search-item:nth-child(2) svg{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -30px;
+  fill: a9a9a9;
 }
 
 .search-item:first-child input {
@@ -656,10 +674,14 @@ fieldset.accomodation {
   cursor: pointer;
 }
 
-.price-controls .min-price,
-.price-controls .max-price {
+.price-controls .min-price {
   width: 90px;
   padding-left: 65px;
+}
+
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 35px;
 }
 
 .price-controls input {
@@ -1004,11 +1026,13 @@ span.hotel-rating {
 
 .main-footer {
   width: 1200px;
-  margin-top: -100px;
-  padding: 0;
-  background-color: rgba( 255, 255, 255, 0.9);
+  margin-top: -125px;
+  padding-top: 36px;
+  padding-bottom: 36px;
 
   display: flex;
+
+  background-color: rgba( 255, 255, 255, 0.9);
 }
 
 .inner-footer {
