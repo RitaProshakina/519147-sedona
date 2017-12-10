@@ -629,17 +629,6 @@ fieldset.accomodation {
   background-size: 22px 17px;
 }
 
-.filter-input-checkbox + label::before {
-  content: "";
-  position: absolute;
-  left: -42px;
-  top: 0;
-}
-
-.filter-input-checkbox:disabled + label::before {
-  fill: #6a6a6a;
-}
-
 .filter button{
   font-weight: normal;
   line-height: 21px;
