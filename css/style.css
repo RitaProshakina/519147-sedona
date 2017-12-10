@@ -577,7 +577,7 @@ fieldset.accomodation {
 }
 
 .filter legend {
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
@@ -597,12 +597,16 @@ fieldset.accomodation {
 .filter-option {
   margin-bottom: 12px;
   padding: 0;
+  display: flex;
 }
 
+li.filter-option {
+  padding-bottom: 34px;
+}
 .filter-option label {
   position: absolute;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
  }
 
 .filter input{
@@ -620,13 +624,52 @@ fieldset.accomodation {
   display: block;
 }
 
-.filter-option label::before  {
+.filter-input-checkbox + label::before {
   width: 22px;
   height: 17px;
   content: "";
-  display: block;
+  display: inline-block;
+  background-image: url(../img/checkbox-off.svg);
+  background-size: 22px 17px;
+
+  margin-left: -20px;
+  margin-right: 17px;
+}
+
+.filter-input-checkbox:disabled + label::before {
+  width: 22px;
+  height: 17px;
+  content: "";
+  display: inline-block;
+  background-image: url(../img/checkbox-off-dis.svg);
+  background-size: 22px 17px;
+
+  margin-left: -20px;
+  margin-right: 17px;
+}
+
+.filter-input-checkbox:checked + label::before {
+  width: 22px;
+  height: 17px;
+  content: "";
+  display: inline-block;
   background-image: url(../img/checkbox-on.svg);
   background-size: 22px 17px;
+
+  margin-left: -20px;
+  margin-right: 17px;
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+  width: 22px;
+  height: 17px;
+  content: "";
+  display: inline-block;
+  background-image: url(../img/checkbox-off-dis.svg);
+  background-size: 22px 17px;
+
+  margin-left: -20px;
+  margin-right: 17px;
 }
 
 .filter button{
@@ -785,7 +828,7 @@ fieldset.accomodation {
 
 .sort-results {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 35px;
   padding-bottom: 20px;
   padding-left:6%;
   padding-right: 6%;
@@ -1037,7 +1080,7 @@ div.rating {
 .stars {
   margin: 0;
   padding-top: 2px;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
   text-align: right;
 }
 
