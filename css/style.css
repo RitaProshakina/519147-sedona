@@ -601,11 +601,13 @@ fieldset.accomodation {
 
 .filter-option label {
   position: absolute;
-  margin-top: -5px;
+  margin-top: 10px;
   margin-left: 10px;
  }
 
 .filter input{
+  width: 22px;
+  height: 17px;
   font: inherit;
   line-height: 21px;
   color: #ffffff;
@@ -618,6 +620,14 @@ fieldset.accomodation {
   display: block;
 }
 
+.filter-option label::before  {
+  width: 22px;
+  height: 17px;
+  content: "";
+  display: block;
+  background-image: url(../img/checkbox-on.svg);
+  background-size: 22px 17px;
+}
 
 .filter-input-checkbox + label::before {
   content: "";
@@ -1107,10 +1117,12 @@ span.hotel-rating {
   height: 47px;
 
   background-color: #81b3d2;
+  fill: #ffffff;
 }
 
 .social-button:hover {
   background-color: #669ec0;
+  fill: #ffffff;
 }
 
 .social-button:active {
@@ -1118,11 +1130,11 @@ span.hotel-rating {
  }
 
 .social-button:hover svg{
-  fill: #000000;
+  fill: #FFFFFF;
  }
 
 .social-button:active svg{
-  fill: rgba( 255, 255, 255, 0.3);
+  fill: #88b6d1;
  }
 
 .footer-copyright {
