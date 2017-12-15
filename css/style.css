@@ -12,8 +12,7 @@ body {
   color: #333333;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  -webkit-box-shadow: 0 -5px 15px 5px rgba(0, 1, 1, .2);
-          box-shadow: 0 -5px 15px 5px rgba(0, 1, 1, .2);
+  box-shadow: 0 -5px 15px 5px rgba(0, 1, 1, .2);
 }
 
 a {
@@ -33,8 +32,7 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -46,16 +44,9 @@ img {
   font-weight: bold;
   line-height: 26px;
   color: #000000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #ffffff;
 }
 
@@ -69,14 +60,9 @@ ul.site-navigation {
   min-width: 1056px;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
 }
 
@@ -209,8 +195,6 @@ ul.site-navigation {
 .feature-list {
   margin-top: 61px;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -250,8 +234,6 @@ ul.site-navigation {
 
 .feature-3-5 {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
   background-color: #eeeeee;
@@ -345,20 +327,16 @@ ul.site-navigation {
 }
 
 .search-item {
-  padding-top: 7px;
   padding-bottom: 32px;
   padding-left: 58px;
   font-size: 0;
-}
-
-label {
-  padding-right: 20px;
+  display: flex;
 }
 
 .search-item:first-child svg {
   position: absolute;
   margin-top: 5px;
-  margin-left: 323px;
+  margin-left: 427px;
   fill: #a9a9a9;
 }
 
@@ -373,7 +351,7 @@ label {
 .search-item:nth-child(2) svg {
   position: absolute;
   margin-top: 5px;
-  margin-left: -30px;
+  margin-left: 427px;
   fill: #a9a9a9;
 }
 
@@ -386,8 +364,7 @@ label {
 }
 
 .search-item:first-child input {
-  content: "";
-  position: absolute;
+
 }
 
 .search-item:nth-child(3) {
@@ -400,11 +377,11 @@ label {
 }
 
 .search-item:nth-child(3) label {
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 .search-item:nth-child(4) label {
-  padding-right: 35px;
+  padding-right: 15px;
 }
 
 .search-item:nth-child(3) input {
@@ -436,6 +413,10 @@ label {
   border: none;
 }
 
+.search-item button {
+  height: 37px;
+}
+
 .button:hover {
   color: #000000;
   border: none;
@@ -447,6 +428,7 @@ label {
 }
 
 .search-button {
+  height: 58px;
   margin-top: 58px;
   margin-bottom: 56px;
   margin-left: 56px;
@@ -472,10 +454,14 @@ label {
   font-weight: bold;
   line-height: 26px;
   color: #000000;
-  vertical-align: middle;
+  margin-top: 5px;
+  margin-right: 20px;
 }
 
 .search-item input {
+  width: 350px;
+  height: 37px;
+  padding: 3px 15px;
   font: inherit;
   font-size: 14px;
   font-weight: bold;
@@ -484,10 +470,7 @@ label {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 350px;
-  padding: 3px 15px;
+  box-sizing: border-box;
 }
 
 .search-item input:hover {
@@ -519,8 +502,6 @@ label {
 }
 
 .filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -581,8 +562,6 @@ fieldset.accomodation {
 .filter-option {
   margin-bottom: 12px;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -592,7 +571,7 @@ li.filter-option {
 
 .filter-option label {
   position: absolute;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 20px;
 }
 
@@ -611,13 +590,15 @@ li.filter-option {
 }
 
 .filter-input-checkbox+label::before {
-  width: 22px;
-  height: 48px;
+  width: 24px;
+  height: 52px;
   content: "";
   display: inline-block;
   vertical-align: middle;
   background-image: url(../img/checkbox-off.svg);
-  background-size: 22px 48px;
+  background-repeat: no-repeat;
+  background-size: 24px auto;
+  margin-top: 15px;
   margin-left: -20px;
   margin-right: 17px;
 }
@@ -627,19 +608,23 @@ li.filter-option {
 }
 
 .filter-input-checkbox:checked+label::before {
-  width: 25px;
-  height: 51px;
+  width: 27px;
+  height: 52px;
   background-image: url(../img/checkbox-on.svg);
-  background-size: 25px 51px;
+  background-repeat: no-repeat;
+  background-size: 27px auto;
+  margin-top: 15px;
   margin-left: -20px;
   margin-right: 17px;
 }
 
 .filter-input-checkbox:checked:disabled+label::before {
-  width: 25px;
-  height: 51px;
+  width: 27px;
+  height: 52px;
   background-image: url(../img/checkbox-off-dis.svg);
-  background-size: 25px 51px;
+  background-repeat: no-repeat;
+  background-size: 27px auto;
+  margin-top: 15px;
   margin-left: -20px;
   margin-right: 17px;
 }
@@ -689,9 +674,7 @@ li.filter-option {
   width: 2px;
   height: 22px;
   background: #ffffff;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .price-controls label {
@@ -718,6 +701,7 @@ label.max-price, label.min-price {
 
 .price-controls input {
   width: 50px;
+  height: 30px;
   margin: 0;
   color: inherit;
   font: inherit;
@@ -749,8 +733,7 @@ label.max-price, label.min-price {
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-          box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
@@ -791,8 +774,6 @@ label.max-price, label.min-price {
   padding-bottom: 20px;
   padding-left: 6%;
   padding-right: 6%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -804,12 +785,8 @@ label.max-price, label.min-price {
 .sort {
   margin-right: 455px;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .sort li {
@@ -902,8 +879,6 @@ button.sort-arrow:active {
 .search-results {
   margin: 0 auto;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -931,8 +906,6 @@ li.hotels-item:last-child {
 .hotels-item {
   padding-top: 26px;
   padding-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-top: 1px solid #e5e5e5;
 }
@@ -944,7 +917,7 @@ li.hotels-item:last-child {
 }
 
 .hotel-info {
-  width: 260px;
+  width: 270px;
   margin-right: 455px;
   margin-left: 31px;
 }
@@ -1056,8 +1029,6 @@ div.hotel-rating {
   padding-top: 36px;
   padding-bottom: 36px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: rgba( 255, 255, 255, 0.9);
 }
@@ -1066,8 +1037,6 @@ div.hotel-rating {
   width: 1200px;
   padding-top: 36px;
   padding-bottom: 36px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #ffffff;
 }
@@ -1086,14 +1055,9 @@ div.hotel-rating {
 
 .main-footer ul, .inner-footer ul {
   width: 160px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
   padding-right: 440px;
   list-style: none;
@@ -1101,15 +1065,9 @@ div.hotel-rating {
 }
 
 .social-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 47px;
   height: 47px;
   background-color: #81b3d2;
